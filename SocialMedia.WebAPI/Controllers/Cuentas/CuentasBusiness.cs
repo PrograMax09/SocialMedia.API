@@ -13,9 +13,9 @@ namespace BusinessLogic.Cuentas
     {
         private readonly Context _context;
 
-        public CuentasBusiness()
+        public CuentasBusiness(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
         public ReadAccountDTO CreateAccount(CreateAccountDTO user)
         {

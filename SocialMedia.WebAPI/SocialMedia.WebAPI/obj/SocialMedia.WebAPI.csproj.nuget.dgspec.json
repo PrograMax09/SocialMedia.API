@@ -215,6 +215,9 @@
             "projectReferences": {
               "C:\\Users\\anton\\source\\repos\\SocialMedia.API\\SocialMedia.WebAPI\\Controllers\\BusinessLogic.csproj": {
                 "projectPath": "C:\\Users\\anton\\source\\repos\\SocialMedia.API\\SocialMedia.WebAPI\\Controllers\\BusinessLogic.csproj"
+              },
+              "C:\\Users\\anton\\source\\repos\\SocialMedia.API\\SocialMedia.WebAPI\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\anton\\source\\repos\\SocialMedia.API\\SocialMedia.WebAPI\\Entities\\Entities.csproj"
               }
             }
           }

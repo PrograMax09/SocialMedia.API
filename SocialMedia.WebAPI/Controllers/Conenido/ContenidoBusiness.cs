@@ -15,9 +15,9 @@ namespace BusinessLogic.Contenido
     public class ContenidoBusiness : IContenidoBusiness
     {
         private readonly Context _context;
-        public ContenidoBusiness()
+        public ContenidoBusiness(Context context)
         {
-            _context = new Context();
+            _context = context;
         }
         public IEnumerable<ReadContentDTO> Get()
         {

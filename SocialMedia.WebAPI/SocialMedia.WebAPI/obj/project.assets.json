@@ -3808,6 +3808,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "BusinessLogic >= 1.0.0",
+      "Entities >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3841,6 +3842,9 @@
           "projectReferences": {
             "C:\\Users\\anton\\source\\repos\\SocialMedia.API\\SocialMedia.WebAPI\\Controllers\\BusinessLogic.csproj": {
               "projectPath": "C:\\Users\\anton\\source\\repos\\SocialMedia.API\\SocialMedia.WebAPI\\Controllers\\BusinessLogic.csproj"
+            },
+            "C:\\Users\\anton\\source\\repos\\SocialMedia.API\\SocialMedia.WebAPI\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\anton\\source\\repos\\SocialMedia.API\\SocialMedia.WebAPI\\Entities\\Entities.csproj"
             }
           }
         }

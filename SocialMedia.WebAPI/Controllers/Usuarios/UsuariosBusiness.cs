@@ -12,9 +12,9 @@ namespace BusinessLogic.Usuarios
     {
         private readonly Context _context;
 
-        public UsuariosBusiness ()
+        public UsuariosBusiness (Context context)
         {
-            _context = new Context ();
+            _context = context;
         }
         public ReadUserDTO CreateUser(CreateUserDTO user)
         {

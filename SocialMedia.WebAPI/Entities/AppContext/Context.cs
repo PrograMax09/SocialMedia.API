@@ -7,11 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Entities.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.Identity.Client;
 
 namespace Entities.AppContext
 {
     public class Context : DbContext
     {
+        public Context(DbContextOptions<Context> options) : base(options)
+        {
+             
+        }
+
         public DbSet<TM_CUENTAS> TM_CUENTAS { get; set; }
         public DbSet<TM_CONTENIDO> TM_CONTENIDO { get; set; }
         public DbSet<TM_USUARIOS> TM_USUARIOS { get; set; }
@@ -19,28 +26,6 @@ namespace Entities.AppContext
         public DbSet<TR_CONTENIDO_CUENTAS> TR_CONTENIDO_CUENTAS { get; set; }
         public DbSet<TR_CUENTAS_SEGUIDORES> TR_CUENTAS_SEGUIDORES { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            try
-            {
-                var server = "localhost";
-                var user = "sa";
-                var catalog = "SocialMediaDB";
-                var password = "SocialMedia321!";
-
-                var stringConnection = $"Server=tcp:{server},1433;" + $" Database={catalog};" +
-                        $" User Id={user}; Password={password}; " +
-                        " TrustServerCertificate=True; Connection Timeout=120;";
-
-                optionsBuilder.UseSqlServer(stringConnection);
-
-            }
-            catch (Exception ex)
-            {
-                var m = ex.Message;
-                throw;
-            }
-        }
         protected override void OnModelCreating(ModelBuilder modelbuilder)
         {
             #region UserDefaultValues
