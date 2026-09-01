@@ -9,6 +9,7 @@
       "SocialMedia.WebAPI/1.0.0": {
         "dependencies": {
           "BusinessLogic": "1.0.0",
+          "Entities": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {

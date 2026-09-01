@@ -14,7 +14,7 @@ builder.Services.AddScoped<IContenidoBusiness, ContenidoBusiness>();
 #endregion
 // Add services to the container.
 
-builder.Services.AddDbContext<Context>(options => options.UseSqlServer(builder.GetConnectionString("SocialMediaDB")));
+builder.Services.AddDbContext<Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SocialMediaDB")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
