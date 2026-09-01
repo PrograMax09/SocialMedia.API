@@ -94,10 +94,12 @@ C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAP
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Humanizer.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
@@ -105,6 +107,7 @@ C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAP
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
@@ -120,9 +123,11 @@ C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAP
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Mono.TextTemplating.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.CodeDom.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
@@ -130,6 +135,8 @@ C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAP
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.Runtime.Caching.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\System.Windows.Extensions.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -142,6 +149,7 @@ C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAP
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\BusinessLogic.dll
 C:\Users\anton\source\repos\SocialMedia.API\SocialMedia.WebAPI\SocialMedia.WebAPI\bin\Debug\net6.0\Entities.dll
