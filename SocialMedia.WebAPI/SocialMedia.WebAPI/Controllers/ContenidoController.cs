@@ -1,5 +1,6 @@
 ﻿using System;
 using BusinessLogic.Contenido;
+using BusinessLogic.DTO.Cuentas;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SocialMedia.WebAPI.Controllers
@@ -12,6 +13,20 @@ namespace SocialMedia.WebAPI.Controllers
         public ContenidoController(IContenidoBusiness business)
         {
             _business = business;
+        }
+
+        [HttpPost]
+        public ActionResult Create(CreateContentDTO createContent)
+        {
+            try
+            {
+                var content = _business.Get();
+                return Ok(content);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         [HttpGet]

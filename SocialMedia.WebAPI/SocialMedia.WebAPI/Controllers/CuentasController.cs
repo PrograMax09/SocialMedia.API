@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Cuentas;
+using BusinessLogic.DTO.Cuentas;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SocialMedia.WebAPI.Controllers
@@ -11,6 +12,20 @@ namespace SocialMedia.WebAPI.Controllers
         public CuentasController(ICuentasBusiness business)
         {
             _business = business;
+        }
+
+        [HttpPost]
+        public ActionResult Create([FromBody] CreateAccountDTO createAccount)
+        {
+            try
+            {
+                var accountList = _business.CreateAccount(createAccount);
+                return Ok(accountList);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         [HttpGet]

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BusinessLogic.Usuarios;
+using BusinessLogic.DTO.Usuarios;
 
 namespace SocialMedia.WebAPI.Controllers
 {
@@ -11,6 +12,20 @@ namespace SocialMedia.WebAPI.Controllers
         public UsuariosController(IUsuariosBusiness business)
         {
             _business = business;
+        }
+
+        [HttpPost]
+        public ActionResult Create(CreateUserDTO createUser)
+        {
+            try
+            {
+                var userList = _business.Get();
+                return Ok(userList);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
 
         [HttpGet]

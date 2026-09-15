@@ -9,6 +9,7 @@ namespace BusinessLogic.Cuentas
 {
     public interface ICuentasBusiness
     {
+        ReadAccountDTO CreateAccount(CreateAccountDTO createAccount);
         ReadAccountDTO Get(string nombre);
         IEnumerable<ReadAccountDTO> Get();
         ReadAccountDTO GetByMail(string correo);
