@@ -14,17 +14,29 @@ namespace SocialMedia.WebAPI.Controllers
             _business = business;
         }
 
-        [HttpPost]
-        public ActionResult Create(CreateUserDTO createUser)
-        {
-            try
-            {
-                var userList = _business.Get();
-                return Ok(userList);
+        [HttpPost] 
+        public ActionResult Create([FromBody] CreateUserDTO createUser) 
+        { 
+            try 
+            { 
+                var newUser = _business.CreateUser(createUser); 
+                return CreatedAtAction(
+                    nameof(GetUser), 
+                    new { correo = newUser.Correo }, 
+                    newUser
+                );
+            } 
+            catch (ArgumentException ex) 
+            { 
+                return BadRequest(ex.Message); 
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, new
+                {
+                    error = ex.Message,
+                    innerError = ex.InnerException?.Message
+                });
             }
         }
 

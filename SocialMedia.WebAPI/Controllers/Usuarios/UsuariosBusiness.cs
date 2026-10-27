@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLogic.DTO.Cuentas;
 using BusinessLogic.DTO.Usuarios;
 using Entities.AppContext;
+using Entities.Entities;
 
 namespace BusinessLogic.Usuarios
 {
@@ -16,10 +18,50 @@ namespace BusinessLogic.Usuarios
         {
             _context = context;
         }
-        public ReadUserDTO CreateUser(CreateUserDTO user)
+    public ReadUserDTO CreateUser(CreateUserDTO user)
         {
-            throw new NotImplementedException();
+            // 1. Validate the input
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user));
+            }
+    
+            if (string.IsNullOrWhiteSpace(user.Correo) ||
+                string.IsNullOrWhiteSpace(user.Contrasena))
+            {
+                throw new ArgumentException("Email or password is empty.");
+            }
+
+            // 2. Check whether the email is already registered
+            var existingUser = _context.TM_USUARIOS
+                .Any(u => u.Correo.ToLower() == user.Correo.ToLower());
+
+            if (existingUser)
+            {
+                throw new ArgumentException("Email is already in use.");
+            }
+
+            // 3. Create the new user
+            var nuevoUsuario = new TM_USUARIOS
+            {
+                Correo = user.Correo,
+                Contrasena = user.Contrasena,
+                Fecha_Alta = DateTime.Now
+            };
+
+            // 4. Save the user to the database
+            _context.TM_USUARIOS.Add(nuevoUsuario);
+            _context.SaveChanges();
+
+            // 5. Return the ReadUserDTO
+            return new ReadUserDTO
+            {
+                Correo = nuevoUsuario.Correo,
+                Descripcion = nuevoUsuario.Descripcion,
+                Fecha_Alta = (DateTime)nuevoUsuario.Fecha_Alta
+            };
         }
+
 
         public ReadUserDTO Get(string correo)
         {

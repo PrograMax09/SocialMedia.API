@@ -5,6 +5,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLogic.DTO.Cuentas;
+using BusinessLogic.DTO.Usuarios;
 using Entities.AppContext;
 using Entities.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,72 @@ namespace BusinessLogic.Contenido
         {
             _context = context;
         }
-        public IEnumerable<ReadContentDTO> Get()
+        public ReadContentDTO CreateContent(CreateContentDTO content)
+        {
+            if (content == null) 
+            { 
+                throw new ArgumentNullException(nameof(content)); 
+            } 
+
+            if (string.IsNullOrWhiteSpace(content.Titulo) || 
+                string.IsNullOrWhiteSpace(content.Cuenta) || 
+                string.IsNullOrWhiteSpace(content.Visibilidad)) 
+            { 
+                throw new ArgumentException( 
+                    "Title, account name or visibility is empty."); 
+            } 
+
+            var cuenta = _context.TM_CUENTAS 
+                .FirstOrDefault(c => c.Nombre_Cuenta == content.Cuenta); 
+
+            if (cuenta == null) 
+            { 
+                throw new ArgumentException( 
+                    "The selected account does not exist."); 
+            } 
+
+            var visibilidad = _context.TM_TIPOS_DE_VISIBILIDAD 
+                .FirstOrDefault(v => v.Tipo_De_Visibilidad == content.Visibilidad); 
+
+            if (visibilidad == null) 
+            { 
+                throw new ArgumentException( 
+                    "The selected visibility type does not exist."); 
+            } 
+
+            var nuevoContenido = new TM_CONTENIDO 
+
+            { 
+                Titulo = content.Titulo, 
+                Descripcion = content.Descripcion, 
+                Media = content.Media, 
+                Id_Cuenta = cuenta.Id, 
+                Id_Visibilidad = visibilidad.Id, 
+                Fecha_Alta = DateTime.Now 
+            }; 
+            
+            _context.TM_CONTENIDO.Add(nuevoContenido); 
+            _context.SaveChanges(); 
+            
+            return new ReadContentDTO 
+            { 
+                Titulo = nuevoContenido.Titulo,
+                Descripcion = nuevoContenido.Descripcion, 
+                Media = nuevoContenido.Media, 
+                Cuenta = new ReadAccountDTO 
+                { 
+                    Nombre = cuenta.Nombre_Cuenta, 
+                    Bio = cuenta.Bio, 
+                    Foto = cuenta.Foto, 
+                    Fecha_Alta = cuenta.Fecha_Alta ?? DateTime.Now, 
+                    Usuario = cuenta.Usuario, 
+                    Id_Usuario = cuenta.UsuarioId 
+                }, 
+                Fecha_Alta = nuevoContenido.Fecha_Alta ?? DateTime.Now 
+            }; 
+        }
+
+            public IEnumerable<ReadContentDTO> Get()
         {
             List<TM_CONTENIDO> aux = _context.TM_CONTENIDO.Include(content => content.Cuenta).ToList();
             

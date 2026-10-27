@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "SocialMedia.WebAPI.Controllers.CuentasController",
+    "Method": "Create",
+    "RelativePath": "api/accounts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createAccount",
+        "Type": "BusinessLogic.DTO.Cuentas.CreateAccountDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SocialMedia.WebAPI.Controllers.CuentasController",
     "Method": "GetAllAccounts",
     "RelativePath": "api/accounts",
     "HttpMethod": "GET",
@@ -20,6 +36,22 @@
       {
         "Name": "nombre",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SocialMedia.WebAPI.Controllers.ContenidoController",
+    "Method": "Create",
+    "RelativePath": "api/content",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createContent",
+        "Type": "BusinessLogic.DTO.Cuentas.CreateContentDTO",
         "IsRequired": true
       }
     ],
@@ -120,6 +152,22 @@
       {
         "Name": "visibility",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SocialMedia.WebAPI.Controllers.UsuariosController",
+    "Method": "Create",
+    "RelativePath": "api/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUser",
+        "Type": "BusinessLogic.DTO.Usuarios.CreateUserDTO",
         "IsRequired": true
       }
     ],

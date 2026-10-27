@@ -15,19 +15,21 @@ namespace SocialMedia.WebAPI.Controllers
             _business = business;
         }
 
+        
         [HttpPost]
-        public ActionResult Create(CreateContentDTO createContent)
+        public ActionResult Create([FromBody] CreateContentDTO createContent)
         {
             try
             {
-                var content = _business.Get();
-                return Ok(content);
+                var content = _business.CreateContent(createContent);
+                return StatusCode(201, content);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, "An unexpected error occurred.");
             }
         }
+
 
         [HttpGet]
         public ActionResult Get() {

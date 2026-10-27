@@ -9,6 +9,7 @@ namespace BusinessLogic.Contenido
 {
     public interface IContenidoBusiness
     {
+        ReadContentDTO CreateContent(CreateContentDTO content);
         public IEnumerable<ReadContentDTO> Get();
         public IEnumerable<ReadContentDTO> GetOrdered(string modo = "asc");
         public ReadContentDTO GetByAccount(string cuenta);
